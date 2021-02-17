@@ -1,7 +1,7 @@
 from getpass import getpass
 import random
-
-class bowler:
+# Importing required libraries
+class bowler: # Creating a bowler class
     def __init__(bowlerobject, name, ballspeed, balllength):
         bowlerobject.name = name
         bowlerobject.ballspeed = ballspeed
@@ -10,7 +10,7 @@ class bowler:
     def bowlaball(abc):
         print("Bowler = ", abc.name, ":ball speed = ", abc.ballspeed, ":Length of the ball = ", abc.balllength)
 
-def bowlanovercummins():
+def bowlanovercummins(): #Creating a function to bowl 1 over from Cummins
     for i in range(0,6):
         x = random.randrange(0,100)
         y = random.randrange(133,147)
@@ -24,7 +24,7 @@ def bowlanovercummins():
             PatCummins = bowler("Pat Cummins", y, "overpitched ball")
             PatCummins.bowlaball()
 
-def bowlanoverhazlewood():
+def bowlanoverhazlewood(): #Creating a function to bowl 1 over from hazlewood
     for i in range(0,6):
         x = random.randrange(0,100)
         y = random.randrange(131,143)
@@ -38,7 +38,7 @@ def bowlanoverhazlewood():
             JoshHazlewood = bowler("Josh Hazlewood", y, "Overpitched")
             JoshHazlewood.bowlaball()
 
-def bowlanoverstarc():
+def bowlanoverstarc(): #Creating a function to bowl 1 over from starc
     for i in range(0,6):
         x = random.randrange(0,100)
         y = random.randrange(141,150)
@@ -52,13 +52,13 @@ def bowlanoverstarc():
             MitchellStarc = bowler("Mitchell Starc", y, "Overpitched ball")
             MitchellStarc.bowlaball()
     
-print("""
+print(""" 
 INFORMATION:
 This program will simulate 1 over from any bowler of your choice. 
 It will tell the bowler's name, speed of the ball bowled and the langth bowled.
 You can choose any of the names that the program gives as options.
-""")
-while True:
+""") #Giving some information about the program
+while True: #Main part of the program
     user_input = getpass("Enter bowler name: Options = Cummins, Hazlewood and Starc : Enter 'done' to stop the simulator: ").lower()
     if user_input == "cummins":
         bowlanovercummins()
@@ -74,3 +74,4 @@ ERROR:
 Wrong name entered.
 Pls enter one of the names that are in the options given by the program!
 """)
+#End of program
